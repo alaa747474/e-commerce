@@ -1,0 +1,2 @@
+const String baseUrl='https://fakestoreapi.com/';
+String token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTY3NTI2NDUwM30.vk1vgKHsHstEl_DOQSFVKOm4pDn8dSaDopWGzb7xh78';
