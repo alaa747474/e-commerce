@@ -12,7 +12,7 @@ ThemeData theme() {
 }
 
 TextTheme textTheme() {
-  return  const TextTheme(
+  return const TextTheme(
     headline1: TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.bold,
@@ -52,6 +52,5 @@ TextTheme textTheme() {
       fontWeight: FontWeight.normal,
       fontSize: 10,
     ),
-   
   );
 }

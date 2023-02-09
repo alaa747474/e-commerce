@@ -4,7 +4,7 @@ class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField(
       {Key? key,
       this.suffixIcon,
-      this.color=const Color.fromARGB(255, 246, 246, 246),
+      this.color = const Color.fromARGB(255, 246, 246, 246),
       required this.obscureText,
       required this.onChanged,
       required this.hintText,
@@ -14,12 +14,12 @@ class CustomTextFormField extends StatelessWidget {
       : super(key: key);
   final String hintText;
   final bool obscureText;
-  final Function(String)?onChanged;
+  final Function(String)? onChanged;
   final String? Function(String?)? validator;
   final IconData icon;
   final TextEditingController? controller;
   final Widget? suffixIcon;
-  final Color?color;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return TextFormField(

@@ -47,7 +47,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   return searchController.value.text == ''     
                       ? const EmptyDataWidget(text: 'Start Search'):
                        state.filteredList.isEmpty?
-                       EmptyDataWidget(text: 'No search Found')
+                       const EmptyDataWidget(text: 'No search Found')
                       : GridView.builder(
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(

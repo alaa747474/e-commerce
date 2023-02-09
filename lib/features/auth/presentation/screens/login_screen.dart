@@ -66,11 +66,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.pushReplacementNamed(
                           context, ProductsScreen.routeName,arguments: _userNameController.text);
                     }
-                      if (state is LoginInProgress ) {
-                      if (_formKey.currentState!.validate()) {
-                        showLoadindDialog(context);
-                      }
-                    }
                   },
                   builder: (context, state) {
                     return Container(

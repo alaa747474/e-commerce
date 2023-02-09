@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:dio/dio.dart';
 import 'package:e_commerce_app/features/auth/data/models/login_model.dart';
 import 'package:e_commerce_app/features/auth/data/repositories/login_repository.dart';
 import 'package:e_commerce_app/core/utils/utils.dart';
@@ -16,7 +17,13 @@ class LoginCubit extends Cubit<LoginState> {
       await _loginRepository.login(loginModel: loginModel);
       emit(LogedIn());
     } catch (e) {
-      showCustomSnackBar(context: context, content: e.toString());
+      if (e is DioError) {
+        switch (e.response!.statusCode) {
+          case 401:
+           return  showCustomSnackBar(context: context, content: 'username or password is incorrect');
+        }
+      } 
+      showCustomSnackBar(context: context, content: 'SomeThing went wrong');
     }
   }
   bool isShowen = true;

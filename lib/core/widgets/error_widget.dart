@@ -6,7 +6,10 @@ class Errorwidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('Something went Wrong',style: Theme.of(context).textTheme.headline3,),
+      child: Text(
+        'Something went Wrong',
+        style: Theme.of(context).textTheme.headline3,
+      ),
     );
   }
 }

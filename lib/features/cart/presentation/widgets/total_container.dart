@@ -41,7 +41,7 @@ class TotalContainer extends StatelessWidget {
           ),
         );
         }
-        return LoadingIndicator();
+        return const LoadingIndicator();
       },
     );
   }
