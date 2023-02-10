@@ -1,9 +1,11 @@
-import 'package:e_commerce_app/features/cart/business_logic/cubit/cart_cubit.dart';
-import 'package:e_commerce_app/features/cart/presentation/widgets/custom_icon.dart';
-import 'package:e_commerce_app/features/products/data/models/product.dart';
+
 import 'package:e_commerce_app/core/widgets/rating_builder.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../products/products.dart';
+import '../../cart.dart';
 
 class CartProductCard extends StatelessWidget {
   const CartProductCard({super.key, required this.product, required this.quantity});

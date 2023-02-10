@@ -1,5 +1,7 @@
-import 'package:e_commerce_app/features/products/data/models/product.dart';
+
 import 'package:equatable/equatable.dart';
+
+import '../../../products/products.dart';
 
 class Cart extends Equatable{
   final List<Product>products;

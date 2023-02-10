@@ -1,9 +1,10 @@
-import 'package:e_commerce_app/features/cart/business_logic/cubit/cart_cubit.dart';
-import 'package:e_commerce_app/features/products/data/models/product.dart';
-import 'package:e_commerce_app/features/products/presentaion/widgets/add_to_cart_button.dart';
+
 import 'package:e_commerce_app/core/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../cart/cart.dart';
+import '../../products.dart';
 
 class BottomContainer extends StatelessWidget {
   const BottomContainer({

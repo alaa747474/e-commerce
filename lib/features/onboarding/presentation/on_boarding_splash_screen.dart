@@ -1,10 +1,11 @@
 
 import 'dart:async';
 
-import 'package:e_commerce_app/features/auth/presentation/screens/login_screen.dart';
-import 'package:e_commerce_app/features/onboarding/data/cache/cache_manager.dart';
 
 import 'package:flutter/material.dart';
+
+import '../../auth/auth.dart';
+import '../data/cache/cache_manager.dart';
 
 
 

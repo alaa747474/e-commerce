@@ -1,6 +1,8 @@
-import 'package:e_commerce_app/features/cart/data/repositories/base_cart_local_storage_repository.dart';
+
 import 'package:hive/hive.dart';
-import 'package:e_commerce_app/features/products/data/models/product.dart';
+import '../../../products/products.dart';
+import '../../cart.dart';
+
 
 class CartLocalStorageRepository extends BaseCartLocalStorageRepository {
   String boxName='cart_box';

@@ -1,8 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
-import 'package:e_commerce_app/features/auth/data/models/login_model.dart';
-import 'package:e_commerce_app/features/auth/data/repositories/login_repository.dart';
 import 'package:e_commerce_app/core/utils/utils.dart';
+import 'package:e_commerce_app/features/auth/auth.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -17,6 +16,7 @@ class LoginCubit extends Cubit<LoginState> {
       await _loginRepository.login(loginModel: loginModel);
       emit(LogedIn());
     } catch (e) {
+      emit(LoginErorr());
       if (e is DioError) {
         switch (e.response!.statusCode) {
           case 401:

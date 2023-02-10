@@ -1,7 +1,8 @@
-import 'package:e_commerce_app/features/products/data/models/product.dart';
-import 'package:e_commerce_app/features/products/presentaion/widgets/bottom_sheet_container.dart';
+
 import 'package:e_commerce_app/core/widgets/rating_builder.dart';
 import 'package:flutter/material.dart';
+
+import '../../products.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key, required this.product});

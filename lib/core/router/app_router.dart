@@ -2,8 +2,8 @@ import 'package:e_commerce_app/features/auth/presentation/screens/login_screen.d
 import 'package:e_commerce_app/features/cart/presentation/screens/cart_screen.dart';
 import 'package:e_commerce_app/features/categories/presentation/screens/categories_screen.dart';
 import 'package:e_commerce_app/features/products/data/models/product.dart';
-import 'package:e_commerce_app/features/products/presentaion/screens/product_details_screen.dart';
-import 'package:e_commerce_app/features/products/presentaion/screens/product_screen.dart';
+import 'package:e_commerce_app/features/products/presentation/screens/product_details_screen.dart';
+import 'package:e_commerce_app/features/products/presentation/screens/product_screen.dart';
 import 'package:e_commerce_app/features/search/presentation/screens/search_screen.dart';
 
 import 'package:flutter/material.dart';

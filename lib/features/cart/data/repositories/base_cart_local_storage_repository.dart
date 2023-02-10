@@ -1,5 +1,7 @@
-import 'package:e_commerce_app/features/products/data/models/product.dart';
+
 import 'package:hive/hive.dart';
+
+import '../../../products/products.dart';
 abstract class BaseCartLocalStorageRepository{
   Future<Box>openBox();
   List<Product>getCartProducts(Box box);

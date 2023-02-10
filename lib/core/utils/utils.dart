@@ -5,13 +5,18 @@ showCustomSnackBar({required BuildContext context, required String content}) {
       backgroundColor: Colors.blueGrey[900], content: Text(content)));
 }
 
-showLoadindDialog(BuildContext context) {
+showErorrDialog(BuildContext context) {
   showDialog(
     context: context,
     builder: (context) => Center(
-      child: CircularProgressIndicator(
-        color: Theme.of(context).primaryColor,
+      child:Container(width: 300,height: 150,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.blueGrey
       ),
+      child: Center(child: 
+      Text('Something went wrong, try again'),),
+      )
     ),
   );
 }

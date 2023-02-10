@@ -1,8 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:e_commerce_app/features/products/data/models/product.dart';
-import 'package:e_commerce_app/features/products/data/repositories/product_repository.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
+import '../../products.dart';
 
 part 'product_state.dart';
 

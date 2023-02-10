@@ -1,14 +1,14 @@
-import 'package:e_commerce_app/features/auth/data/models/login_model.dart';
-import 'package:e_commerce_app/features/auth/data/repositories/base_login_repository.dart';
+
 import 'package:e_commerce_app/core/utils/dio_helper.dart';
+import 'package:e_commerce_app/features/auth/auth.dart';
 
 class LoginRepository extends BaseLoginRepository {
-  final DioSrvice _dioSrvice;
+  final DioHelper _dioHelper;
 
-  LoginRepository(this._dioSrvice);
+  LoginRepository(this._dioHelper);
   @override
   Future<void> login({required LoginModel loginModel}) async {
-    await _dioSrvice.postData(
+    await _dioHelper.postData(
       endPoint: 'auth/login',
       data: loginModel.tojson(),
     );

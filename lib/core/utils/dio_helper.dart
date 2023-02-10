@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 
-class DioSrvice {
+class DioHelper {
   final Dio _dio;
-  DioSrvice(this._dio);
+  DioHelper(this._dio);
 
   Future getData({required String endPoint}) async {
     Response response = await _dio.get(endPoint);

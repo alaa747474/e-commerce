@@ -1,10 +1,9 @@
-import 'package:e_commerce_app/features/cart/business_logic/cubit/cart_cubit.dart';
-import 'package:e_commerce_app/features/cart/presentation/widgets/cart_product_card.dart';
-import 'package:e_commerce_app/features/cart/presentation/widgets/total_container.dart';
+
 import 'package:e_commerce_app/core/widgets/empty_data_widget.dart';
 import 'package:e_commerce_app/core/widgets/error_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../cart.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -32,7 +31,7 @@ class CartScreen extends StatelessWidget {
               },
             );
           }
-          return const Errorwidget();
+          return const CustomErrorwidget();
         },
       ),
       bottomSheet:  const TotalContainer(),

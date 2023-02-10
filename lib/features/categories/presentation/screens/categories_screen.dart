@@ -1,10 +1,9 @@
-import 'package:e_commerce_app/features/categories/business_logic/cubit/category_cubit.dart';
-import 'package:e_commerce_app/features/products/presentaion/screens/product_details_screen.dart';
-import 'package:e_commerce_app/features/products/presentaion/widgets/product_card.dart';
+
 import 'package:e_commerce_app/core/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../products/products.dart';
+import '../../categories.dart';
 
 class CartegoriesScreen extends StatelessWidget {
   const CartegoriesScreen({super.key, required this.categoryIndex});

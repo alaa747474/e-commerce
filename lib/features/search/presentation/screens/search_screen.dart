@@ -1,10 +1,10 @@
 import 'package:e_commerce_app/core/widgets/empty_data_widget.dart';
-import 'package:e_commerce_app/features/auth/auth.dart';
-import 'package:e_commerce_app/features/products/data/models/product.dart';
-import 'package:e_commerce_app/features/products/presentaion/widgets/product_card.dart';
-import 'package:e_commerce_app/features/search/cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../auth/auth.dart';
+import '../../../products/products.dart';
+import '../../search.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key, required this.products});

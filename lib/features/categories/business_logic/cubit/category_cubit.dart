@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:e_commerce_app/features/categories/data/repositories/category_repository.dart';
-import 'package:e_commerce_app/features/products/data/models/product.dart';
 import 'package:equatable/equatable.dart';
+import '../../../products/products.dart';
+import '../../categories.dart';
 
 part 'category_state.dart';
 

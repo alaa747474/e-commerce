@@ -10,13 +10,13 @@ import 'package:get_it/get_it.dart';
 final getIt = GetIt.instance;
 void serviceLocatorSetup() {
 
-  getIt.registerSingleton<DioSrvice>(DioSrvice(dioSetUp()));
+  getIt.registerSingleton<DioHelper>(DioHelper(dioSetUp()));
   getIt.registerSingleton<LoginRepository>(
-      LoginRepository(getIt.get<DioSrvice>()));
+      LoginRepository(getIt.get<DioHelper>()));
   getIt.registerSingleton<ProductRepository>(
-      ProductRepository(getIt.get<DioSrvice>()));
+      ProductRepository(getIt.get<DioHelper>()));
   getIt.registerSingleton<CategoryRepository>(
-      CategoryRepository(getIt.get<DioSrvice>()));
+      CategoryRepository(getIt.get<DioHelper>()));
   getIt.registerSingleton<CartLocalStorageRepository>(
       CartLocalStorageRepository());
 }

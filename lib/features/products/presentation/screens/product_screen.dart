@@ -1,14 +1,12 @@
-import 'package:e_commerce_app/features/cart/presentation/screens/cart_screen.dart';
-import 'package:e_commerce_app/features/categories/business_logic/cubit/category_cubit.dart';
-import 'package:e_commerce_app/features/categories/presentation/screens/categories_screen.dart';
-import 'package:e_commerce_app/features/products/business_logic/cubit/product_cubit.dart';
-import 'package:e_commerce_app/features/products/presentaion/screens/product_details_screen.dart';
-import 'package:e_commerce_app/core/widgets/error_widget.dart';
-import 'package:e_commerce_app/core/widgets/loading_indicator.dart';
-import 'package:e_commerce_app/features/products/presentaion/widgets/product_card.dart';
-import 'package:e_commerce_app/features/search/presentation/screens/search_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../core/widgets/error_widget.dart';
+import '../../../../core/widgets/loading_indicator.dart';
+import '../../../cart/cart.dart';
+import '../../../categories/categories.dart';
+import '../../../search/search.dart';
+import '../../products.dart';
 
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({super.key, required this.userName});
@@ -169,7 +167,7 @@ class ProductsScreen extends StatelessWidget {
                 ],
               );
             }
-            return const Errorwidget();
+            return const CustomErrorwidget();
           },
         ),
       ),

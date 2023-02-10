@@ -1,8 +1,8 @@
 
-import 'package:e_commerce_app/features/onboarding/presentation/on_boarding_splash_screen.dart';
-import 'package:e_commerce_app/features/onboarding/presentation/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../onboarding.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

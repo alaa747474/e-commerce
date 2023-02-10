@@ -10,6 +10,9 @@ abstract class LoginState extends Equatable {
 class LoginInitial extends LoginState {}
 class LoginInProgress extends LoginState{}
 class LogedIn extends LoginState{}
+class LoginErorr extends LoginState{
+  
+}
 class ShowPasswordState extends LoginState{
   final bool isShowen;
 @override

@@ -1,15 +1,15 @@
-import 'package:e_commerce_app/features/products/data/models/product.dart';
-import 'package:e_commerce_app/features/products/data/repositories/base_product_repository.dart';
-import 'package:e_commerce_app/core/utils/dio_helper.dart';
-class ProductRepository extends BaseProductRepository {
-  final DioSrvice _dioSrvice;
 
-  ProductRepository(this._dioSrvice);
+import 'package:e_commerce_app/core/utils/dio_helper.dart';
+import '../../products.dart';
+class ProductRepository extends BaseProductRepository {
+  final DioHelper _dioHelper;
+
+  ProductRepository(this._dioHelper);
   @override
   Future<List<Product>> getAllProducts() async {
     List<Product> products = [];
     var data =
-    await _dioSrvice.getData(endPoint: 'products');
+    await _dioHelper.getData(endPoint: 'products');
     for (var element in data) {
       products.add(Product.fromJson(element));
     }

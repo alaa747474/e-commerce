@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
-import 'package:e_commerce_app/features/cart/data/models/cart.dart';
-import 'package:e_commerce_app/features/cart/data/repositories/cart_local_storage_repository.dart';
 import 'package:e_commerce_app/features/products/data/models/product.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hive/hive.dart';
+
+import '../../cart.dart';
 
 part 'cart_state.dart';
 
