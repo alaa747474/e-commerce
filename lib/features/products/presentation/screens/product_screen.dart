@@ -113,27 +113,7 @@ class ProductsScreen extends StatelessWidget {
                                         context, CartegoriesScreen.routeName,
                                         arguments: index);
                                   },
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      CircleAvatar(
-                                        backgroundColor: colors[index],
-                                        radius: 40,
-                                        child: Image.asset(
-                                          images[index],
-                                          width: 50,
-                                          height: 50,
-                                        ),
-                                      ),
-                                      Text(
-                                        state.categoriesName[index],
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headline5,
-                                      ),
-                                    ],
-                                  ),
+                                  child: CategoryWidget(color: colors[index],images: images[index],text: state.categoriesName[index],)
                                 );
                               }
                               return const LoadingIndicator();
@@ -174,3 +154,4 @@ class ProductsScreen extends StatelessWidget {
     );
   }
 }
+

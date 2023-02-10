@@ -8,3 +8,4 @@ export 'presentation/screens/product_screen.dart';
 export 'presentation/widgets/add_to_cart_button.dart';
 export 'presentation/widgets/bottom_sheet_container.dart';
 export 'presentation/widgets/product_card.dart';
+export 'presentation/widgets/category_widget.dart';

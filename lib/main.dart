@@ -1,20 +1,15 @@
 import 'package:e_commerce_app/core/utils/service_locator.dart';
-import 'package:e_commerce_app/features/auth/auth.dart';
-import 'package:e_commerce_app/features/cart/business_logic/cubit/cart_cubit.dart';
-import 'package:e_commerce_app/features/cart/data/repositories/cart_local_storage_repository.dart';
-import 'package:e_commerce_app/features/categories/business_logic/cubit/category_cubit.dart';
-import 'package:e_commerce_app/features/categories/data/repositories/category_repository.dart';
-import 'package:e_commerce_app/features/onboarding/presentation/on_boarding_screen.dart';
-import 'package:e_commerce_app/features/products/business_logic/cubit/product_cubit.dart';
-import 'package:e_commerce_app/features/products/data/models/product.dart';
-import 'package:e_commerce_app/features/products/data/models/rating.dart';
-import 'package:e_commerce_app/features/products/data/repositories/product_repository.dart';
 import 'package:e_commerce_app/core/router/app_router.dart';
 import 'package:e_commerce_app/core/utils/theme.dart';
 import 'package:e_commerce_app/features/search/cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'features/auth/auth.dart';
+import 'features/cart/cart.dart';
+import 'features/categories/categories.dart';
+import 'features/onboarding/onboarding.dart';
+import 'features/products/products.dart';
 
 void main()async {
   serviceLocatorSetup();
