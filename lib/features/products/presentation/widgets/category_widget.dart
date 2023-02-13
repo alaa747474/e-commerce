@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CategoryWidget extends StatelessWidget {
   const CategoryWidget({
@@ -19,11 +20,11 @@ final String text;
       children: [
         CircleAvatar(
           backgroundColor: color,
-          radius: 40,
+          radius: 40.r,
           child: Image.asset(
             images,
-            width: 50,
-            height: 50,
+            width: 50.w,
+            height: 50.h,
           ),
         ),
         Text(

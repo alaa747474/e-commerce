@@ -2,6 +2,7 @@
 import 'package:e_commerce_app/core/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../cart/cart.dart';
 import '../../products.dart';
@@ -17,20 +18,20 @@ class BottomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 90.h,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Theme.of(context).backgroundColor,
         boxShadow: [
           BoxShadow(
-              spreadRadius: 6,
-              blurRadius: 10,
+              spreadRadius: 6.h,
+              blurRadius: 10.h,
               color: Colors.grey[400]!.withOpacity(0.3),
               offset: const Offset(0, -10))
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 15.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -41,7 +42,7 @@ class BottomContainer extends StatelessWidget {
             BlocBuilder<CartCubit, CartState>(
               builder: (context, state) {
                 return AddToCartButton(
-                  width: 150,
+                  width: 130.h,
                   onPressed: () {
                     context.read<CartCubit>().addtoCart(product);
                     showCustomSnackBar(context: context, content:'Added to your Cart');

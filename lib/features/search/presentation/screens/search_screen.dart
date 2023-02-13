@@ -1,7 +1,7 @@
 import 'package:e_commerce_app/core/widgets/empty_data_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../auth/auth.dart';
 import '../../../products/products.dart';
 import '../../search.dart';
@@ -27,7 +27,7 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 60, right: 20, left: 20),
+        padding:  EdgeInsets.only(top: 45.h, right: 15.w, left: 15.w),
         child: Column(
           children: [
             Row(
@@ -35,7 +35,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 InkWell(
                     onTap: () => Navigator.pop(context),
                     child: Padding(
-                      padding: const EdgeInsets.only(right: 10),
+                      padding:  EdgeInsets.only(right: 8.w),
                       child: Icon(
                         Icons.arrow_back,
                         color: Theme.of(context).hintColor,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomIcon extends StatelessWidget {
   const CustomIcon({super.key, required this.icon, required this.onPressed});
@@ -9,7 +10,7 @@ class CustomIcon extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        width: 30,height: 30,
+        width: 30.w,height: 30.h,
         decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
           borderRadius: BorderRadius.circular(10)

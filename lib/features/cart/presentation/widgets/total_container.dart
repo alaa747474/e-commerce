@@ -1,6 +1,7 @@
 import 'package:e_commerce_app/core/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../auth/auth.dart';
 import '../../cart.dart';
 
@@ -16,7 +17,7 @@ class TotalContainer extends StatelessWidget {
           return state.cart.total == 0
               ? const SizedBox()
               : Container(
-                  height: 150,
+                  height: 100.h,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Theme.of(context).backgroundColor,

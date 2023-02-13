@@ -1,6 +1,6 @@
 
 import 'package:e_commerce_app/core/widgets/rating_builder.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,7 +17,7 @@ class CartProductCard extends StatelessWidget {
       builder: (context, state) {
         final title=product.title!.split(' ').take(2).join(' ').split('-').join(' ');
         return Container(
-          margin: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+          margin: EdgeInsets.symmetric(horizontal: 15.h,vertical: 8.h),
           width: double.infinity,
           height: MediaQuery.of(context).size.height * 0.15,
           decoration: BoxDecoration(
@@ -28,8 +28,8 @@ class CartProductCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                width: 100,
-                height: 100,
+                width: 100.h,
+                height: 100.h,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(

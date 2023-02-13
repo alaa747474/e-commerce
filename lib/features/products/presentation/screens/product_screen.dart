@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/widgets/error_widget.dart';
 import '../../../../core/widgets/loading_indicator.dart';
 import '../../../cart/cart.dart';
@@ -15,6 +16,8 @@ class ProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     final mqHieght=MediaQuery.of(context).size.height;
+    final mqWidth=MediaQuery.of(context).size.width;
     List colors = [
       Theme.of(context).cardColor.withOpacity(0.4),
       const Color.fromARGB(255, 251, 221, 224),
@@ -70,7 +73,7 @@ class ProductsScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+        padding:  EdgeInsets.symmetric(horizontal: 15.w,vertical: 8.h),
         child: BlocBuilder<ProductCubit, ProductState>(
           builder: (context, state) {
             if (state is ProductInitial) {
@@ -81,21 +84,21 @@ class ProductsScreen extends StatelessWidget {
                 children: [
 
                   Container(
-                    margin:const EdgeInsets.only(bottom: 10),
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    margin: EdgeInsets.only(bottom: 8.h),
+                    padding:  EdgeInsets.symmetric(horizontal: 10.w),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(30)
                     ),
                     
-                    height: 120,
+                    height: mqHieght/7,
                     child: BlocBuilder<CategoryCubit, CategoryState>(
                       builder: (context, state) {
                         return GridView.builder(
                           scrollDirection: Axis.horizontal,
                           gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
-                            mainAxisExtent: 110,
+                               SliverGridDelegateWithFixedCrossAxisCount(
+                            mainAxisExtent: mqWidth/3.8,
                             crossAxisCount: 1,
                           ),
                           itemCount: 4,
@@ -124,13 +127,13 @@ class ProductsScreen extends StatelessWidget {
                   ),
                   Expanded(
                     child: GridView.builder(
-                      padding: const EdgeInsets.only(bottom: 10),
+                      padding:  EdgeInsets.only(bottom: 10.h),
                       gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                              mainAxisSpacing: 10 / 1,
-                              crossAxisSpacing: 10 / 1,
+                           SliverGridDelegateWithFixedCrossAxisCount(
+                              mainAxisSpacing: 10 / 1.r,
+                              crossAxisSpacing: 10 / 1.r,
                               crossAxisCount: 2,
-                              childAspectRatio: 0.6),
+                              childAspectRatio: 0.55.r),
                       itemCount:state.products.length,
                       itemBuilder: (BuildContext context, int index) {
                         return InkWell(

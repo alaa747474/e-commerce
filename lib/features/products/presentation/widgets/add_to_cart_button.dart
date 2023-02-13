@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddToCartButton extends StatelessWidget {
   const AddToCartButton({
@@ -13,10 +14,10 @@ class AddToCartButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15)
+        borderRadius: BorderRadius.circular(10.h)
       ),
       elevation: 0,
-      height: 50,
+      height: 40.h,
         minWidth: width,
         onPressed: onPressed,
         color: Theme.of(context).primaryColor,

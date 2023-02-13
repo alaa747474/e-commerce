@@ -4,6 +4,7 @@ import 'package:e_commerce_app/core/utils/theme.dart';
 import 'package:e_commerce_app/features/search/cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'features/auth/auth.dart';
 import 'features/cart/cart.dart';
@@ -39,12 +40,18 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => SearchCubit(),
         ),
       ],
-      child: MaterialApp(
-      onGenerateRoute: AppRouer.generateRoute,
-      theme: theme(),
-      debugShowCheckedModeBanner: false,
-      home: showHome?const LoginScreen():const OnboardingScreen(),
-    )
+      child: ScreenUtilInit(
+        designSize:const Size(380, 690) ,
+        splitScreenMode:true,
+        minTextAdapt: true,
+        builder: (BuildContext context, Widget? child) { 
+        return  MaterialApp(
+        onGenerateRoute: AppRouer.generateRoute,
+        theme: theme(),
+        debugShowCheckedModeBanner: false,
+        home: showHome?const ProductsScreen(userName: 'userName'):const OnboardingScreen(),
+          );}
+      )
     );
   }
 }

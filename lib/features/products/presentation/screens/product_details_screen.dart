@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:e_commerce_app/core/widgets/rating_builder.dart';
 import 'package:flutter/material.dart';
@@ -28,17 +29,17 @@ class ProductDetailsScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.symmetric(horizontal: 20.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: const EdgeInsets.only(bottom: 20),
+              margin:  EdgeInsets.only(bottom: 15.h),
               width: double.infinity,
-              height: 300,
+              height: 300.h,
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.h),
                   image: DecorationImage(
                       image: NetworkImage(product.image.toString()),
                       fit: BoxFit.fitHeight)),
@@ -57,8 +58,8 @@ class ProductDetailsScreen extends StatelessWidget {
                 RatingStars(product: product)
               ],
             ),
-            const SizedBox(
-              height: 10,
+             SizedBox(
+              height: 8.h,
             ),
             Text(
               'Product Details',
